@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 echo "=== Installing Merged Encryption Keys ==="
 
 # Ensure the target directory exists
