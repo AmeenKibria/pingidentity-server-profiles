@@ -4,8 +4,8 @@ echo "Ensuring data directory exists..."
 mkdir -p "${SERVER_ROOT_DIR}/server/default/data"
 
 echo "Installing encryption key from Kubernetes secret..."
-if [ -f "/opt/staging/instance/server/default/data/pf.jwk" ]; then
-    cp /opt/staging/instance/server/default/data/pf.jwk "${SERVER_ROOT_DIR}/server/default/data/pf.jwk"
+if [ -f "/opt/secrets/encryption-key/pf.jwk" ]; then
+    cp /opt/secrets/encryption-key/pf.jwk "${SERVER_ROOT_DIR}/server/default/data/pf.jwk"
     echo "✅ Encryption key installed from secret"
 else
     echo "❌ Secret not found, installing fallback key"
