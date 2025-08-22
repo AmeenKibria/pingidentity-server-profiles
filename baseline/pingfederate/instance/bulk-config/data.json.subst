@@ -1,5 +1,5 @@
 {
-    "metadata": {},
+    "metadata": {"pfVersion": "12.2.0.0"},
     "operations": [
         {
             "operationType": "SAVE",
