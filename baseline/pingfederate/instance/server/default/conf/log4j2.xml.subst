@@ -1132,8 +1132,8 @@
         org.sourceid.wstrust.log.STSAuditLogger (when PingFederate is acting as a Security Token Service)
         org.sourceid.websso.profiles.idp.AsAuditLogger (when PingFederate is acting as an OAuth Authorization Server)
         -->
-        <RollingFile name="SecurityAuditToCEFFile" fileName="/opt/logs/audit-cef.log"
-            filePattern="/opt/logs/audit-cef.%d{yyyy-MM-dd}.log" >
+        <RollingFile name="SecurityAuditToCEFFile" fileName="/opt/out/instance/log/audit-cef.log"
+            filePattern="/opt/out/instance/log/audit-cef.%d{yyyy-MM-dd}.log" >
             <PatternLayout>
                 <pattern>%escape{CEF}{CEF:0|Ping Identity|PingFederate|%X{pfversion}|%X{event}|%X{event}|0|rt=%d{MMM dd yyyy HH:mm:ss.SSS} duid=%X{subject} src=%X{ip} msg=%X{status} cs1Label=Target Application URL cs1=%X{app} cs2Label=Connection ID cs2=%X{connectionid} cs3Label=Protocol cs3=%X{protocol} dvchost=%X{host} cs4Label=Role cs4=%X{role} externalId=%X{trackingid} cs5Label=SP Local User ID cs5=%X{localuserid} cs6Label=Attributes cs6=%X{attributes} %n}</pattern>
             </PatternLayout>
